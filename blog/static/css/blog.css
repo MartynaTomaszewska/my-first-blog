@@ -79,10 +79,6 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
-.content_user {
-    margin-left: 40px;
-}
-
 #posts-wrapper {
     display: flex;
     align-items: flex-start;
