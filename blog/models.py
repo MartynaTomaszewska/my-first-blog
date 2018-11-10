@@ -18,3 +18,22 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class User(models.Model):
+    name = models.CharField(max_length=50, default='')
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    group = models.ForeignKey('Group', on_delete=models.CASCADE, default=None, blank=True, null=True)
+    email = models.EmailField(default='', blank=True)
+
+    def __str__(self):
+        return self.name
+
+class Group(models.Model):
+    name = models.CharField(max_length=50, default='', blank=True)
+
+    def __str__(self):
+        return self.name
+    
+
+

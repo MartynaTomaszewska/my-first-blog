@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.utils import timezone
-from .models import Post
+from .models import Post, User, Group
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+
 
 # Create your views here.
 
@@ -30,3 +31,12 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def users_list(request):
+    users = User.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    groups = Group.objects.all()
+    return render(request, 'blog/users_list.html', {'users': users, 'groups': groups})
+
+
+    
+
