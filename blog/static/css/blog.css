@@ -38,6 +38,10 @@ h1, h2, h3, h4 {
     float: right;
 }
 
+.post-form {
+    width: 60%;
+}
+
 .post-form textarea, .post-form input {
     width: 100%;
 }
@@ -51,6 +55,7 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
+    width: 50%;
 }
 
 .post h1 a, .post h1 a:visited {
@@ -71,6 +76,14 @@ h1, h2, h3, h4 {
 
 .content_user {
     margin-left: 40px;
+}
+
+#posts-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
 }
 
 #user-list-wrapper {
